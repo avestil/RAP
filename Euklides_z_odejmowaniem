@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int m, n;
+    printf("Podaj zmienne oddzielone spacja: ");
+    scanf("%d %d", &m, &n);   
+    while(m != n) {
+        if (m < n) {
+            n-=m;
+        } else {
+            m-=n;
+        }
+    }
+    printf("NWD: %d", n);
+    return 0;
+}
