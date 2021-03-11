@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+
+int main()
+{
+    
+    int m, n, r; // zadeklarowanie zmiennych zgodnie z poleceniem
+    printf("Podaj pierwsza liczbe z zakresu 0-50:");
+    scanf("%d", &m);
+    printf("Podaj druga liczbe z zakresu 0-50:");
+    scanf("%d", &n);
+
+    while(m>n) //petla gdy pierwsza liczba podana przez uzytkownika jest wieksza od drugiej
+    {
+        r=m%n; //obliczanie roznicy
+        if(r==0)
+        {
+            printf("Najwiekszy wspolny ich dzielnik to: %d",n);
+            break; //przerwanie petli gdy roznica =0
+        }
+        m=n; //zamienienie zmiennych kolejnoscia zgodnie z algorytmem
+        n=r;
+
+    }
+    while(n>m) //petla gdy druga liczba podana przez uzytkownika jest wieksza od pierwszej
+    {
+        r=n%m; //obliczanie roznicy
+        if(r==0)
+        {
+            printf("Najwiekszy wspolny ich dzielnik to: %d",m);
+            break; //przerwanie petli gdy roznica =0
+        }
+        n=m; //zamienienie zmiennych kolejnoscia zgodnie z algorytmem
+        m=r;
+
+    }
+
+
+    return 0;
+}
