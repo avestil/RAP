@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+
+int main()
+{
+        int m, n; //deklarowanie zmiennych zgodnie z poleceniem
+    printf("Podaj pierwsza liczbe z zakresu 0-50:");
+    scanf("%d", &m);
+    printf("Podaj druga liczbe z zakresu 0-50:");
+    scanf("%d", &n);
+
+    do //petla do while ktora bedzie sie odbywac dopoki pierwsza liczba bedzie >0
+    {
+        if(m>=n)
+            {
+                m=m-n; // jesli m bedzie wieksze lub rowne n to od m odejmujemy n
+            }
+        else
+            {
+                n=n-m; // jesli m bedzie mniejszen to od n odejmujemy m
+            }
+
+    }while(m>0);
+    if(m==0)
+    {
+        printf("Najwiekszy wspolny dzielnik to: %d",n); // jesli m=0 wypisuje n jako najwiekszy wspolny dzielnik
+    }
+    else
+    {
+        printf("Najwiekszy wspolny dzielnik to: %d",m); // jesli m rozne od 0 to deklarujemy m jako najwiekszy wspolny dzielnik
+    }
+
+
+
+
+
+}
